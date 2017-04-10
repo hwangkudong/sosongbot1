@@ -64,7 +64,7 @@ module.exports = function(app, fs)
 			
 			natural_language_classifier.classify({
 				  text: inputText,
-				  classifier_id: '90e7b4x199-nlc-36160' },
+				  classifier_id: '90e7b4x199-nlc-36441' },
 				  function(err, response) {
 				    if (err)
 				      console.log('error:', err);
