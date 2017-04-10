@@ -58,6 +58,8 @@ module.exports = function(app, fs)
 			  version: 'v1'
 			});
 			
+			console.log( '입력된 문자 : ' + req.body["content"] );
+			 
 			function callback(error, response, body) {
 				// 에러 체크
 				if(error) return console.log('Error:', error);
