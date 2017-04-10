@@ -8,13 +8,14 @@
 	"dependencies": {
 		"express": "4.13.x",
 		"cfenv": "1.0.x",
-	    "body-parser": "~1.14.2",
-        "express-session": "~1.13.0",
-	    "request": "~2.74.0",
-	    "encodeuri-safe": "~0.0.1"
+		"body-parser": "~1.14.2",
+		"express-session": "~1.13.0",
+		"request": "~2.74.0",
+		"encodeuri-safe": "~0.0.1",
+		"watson-developer-cloud": "latest"
 	},
 	"repository": {},
 	"engines": {
 		"node": "4.x"
-	} 
+	}
 }
