@@ -58,21 +58,22 @@ module.exports = function(app, fs)
 			  version: 'v1'
 			});
 			
-			console.log( '입력된 문자 : ' + req.body["content"] );
-			var inputText =  req.body["content"]; //입력된 문자
 			
-			natural_language_classifier.classify({
-				  text: inputText,
-				  classifier_id: '90e7b4x199-nlc-36160' },
-				  function(err, response) {
-				    if (err)
-				      console.log('error:', err);
-				    else{
-				      console.log(JSON.stringify(response, null, 2));
-				      var result1 = JSON.stringify(response, null, 2);
-				      console.log("결과 : " + result1);
-				      }
-				});
+			var inputText =  req.body["content"]; //입력된 문자
+			console.log( '입력된 문자 : ' + inputText);
+			
+//			natural_language_classifier.classify({
+//				  text: inputText,
+//				  classifier_id: '90e7b4x199-nlc-36160' },
+//				  function(err, response) {
+//				    if (err)
+//				      console.log('error:', err);
+//				    else{
+//				      console.log(JSON.stringify(response, null, 2));
+//				      var result1 = JSON.stringify(response, null, 2);
+//				      console.log("결과 : " + result1);
+//				      }
+//				});
 				
 			 
 //			function callback(error, response, body) {
@@ -93,7 +94,7 @@ module.exports = function(app, fs)
 //				});
 //			}
 			
-			request(natural_language_classifier);
+//			request(natural_language_classifier);
 
 		}
     });
