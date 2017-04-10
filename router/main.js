@@ -75,7 +75,7 @@ module.exports = function(app, fs)
 					res.end(data);
 					return;
 				})
-			}
+			})
 			
 			
 //			natural_language_classifier.classify({
