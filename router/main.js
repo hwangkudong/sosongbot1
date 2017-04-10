@@ -62,6 +62,22 @@ module.exports = function(app, fs)
 			var inputText =  req.body["content"]; //입력된 문자
 			console.log( '입력된 문자 : ' + inputText);
 			
+			fs.readFile( __dirname + "/../data/message.json", 'utf8',  function(err, data){
+				var messages = JSON.parse(data);
+				messages["message"] = {"text" : inputText};
+				fs.writeFile(__dirname + "/../data/message.json",
+						 JSON.stringify(messages, null, '\t'), "utf8", function(err, data){
+				})
+				fs.readFile( __dirname + "/../data/message.json", 'utf8', function (err, data) {
+					// 결과 로그 출력
+					console.log("Request_user_key : "+req.body["user_key"]);
+					console.log("Request_type : keyboard - "+req.body["content"]);
+					res.end(data);
+					return;
+				})
+			}
+			
+			
 //			natural_language_classifier.classify({
 //				  text: inputText,
 //				  classifier_id: '90e7b4x199-nlc-36160' },
