@@ -48,6 +48,7 @@ module.exports = function(app, fs)
 				})
 			})
 		}else { // 아닐 경우 이미지검색 실시
+		    console.log( '안녕 test야' );
 			var request = require('request'); //get방식으로 request에 대한 response를 받기위해
 			var watson = require('watson-developer-cloud');
 
