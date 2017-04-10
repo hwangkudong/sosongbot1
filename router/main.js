@@ -58,17 +58,26 @@ module.exports = function(app, fs)
 			  version: 'v1'
 			});
 			
-			natural_language_classifier.classify({
-			  text: 'How hot will it be today?',
-			  classifier_id: '90e7b4x199-nlc-36160' },
-			  function(err, response) {
-			    if (err)
-			      console.log('error:', err);
-			    else{
-			      console.log(JSON.stringify(response, null, 2));
-			      }
-			});
+			function callback(error, response, body) {
+				// 에러 체크
+				if(error) return console.log('Error:', error);
+				// 상태 값 체크
+				if(response.statusCode !== 200)	return console.log('Invalid Status Code Returned:', response.statusCode);
+				
+				natural_language_classifier.classify({
+				  text: 'How hot will it be today?',
+				  classifier_id: '90e7b4x199-nlc-36160' },
+				  function(err, response) {
+				    if (err)
+				      console.log('error:', err);
+				    else{
+				      console.log(JSON.stringify(response, null, 2));
+				      }
+				});
+			}
 			
+			request(natural_language_classifier, callback);
+
 		}
     });
 	
