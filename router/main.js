@@ -92,8 +92,8 @@ module.exports = function(app, fs)
 //				      }
 //				});
 //			}
-//			
-//			request(natural_language_classifier, callback);
+			
+			request(natural_language_classifier);
 
 		}
     });
