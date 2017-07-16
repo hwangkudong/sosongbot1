@@ -53,8 +53,8 @@ module.exports = function(app, fs)
 			var watson = require('watson-developer-cloud');
 
 			var natural_language_classifier = watson.natural_language_classifier({
-			  username: 'd76902b6-f214-4a16-9ff7-0db1a6de9888',
-			  password: 'YjyQG68nMzHo',
+			  username: '4d09ab34-bbef-4065-8193-715f849eb697',
+			  password: 'R3TvWPx7XmCm',
 			  version: 'v1'
 			});
 			
@@ -89,11 +89,6 @@ module.exports = function(app, fs)
 				      }
 			});
 			
-			
-			
-			
-
-				
 			 
 //			function callback(error, response, body) {
 //				// 에러 체크
