@@ -25,14 +25,14 @@ module.exports = function(app, fs)
         }
 		
 		// 초기 keyboard 버튼일 경우(도움말||시작하기||만든이)
-		if(req.body["content"] === "도움말" || req.body["content"] === "시작하기" || req.body["content"] === "만든이"){
+		if(req.body["content"] === "사이버 소송도우미" || req.body["content"] === "지능형 UHD" || req.body["content"] === "만든이"){
 			fs.readFile( __dirname + "/../data/message.json", 'utf8',  function(err, data){
 				var messages = JSON.parse(data);
 				// 각 keyboard 버튼에 따른 응답 메시지 설정
 				if(req.body["content"] === "도움말"){
 					messages["message"] = {"text" : "얻고 싶은 이미지파일의 키워드를 검색하시면 자동으로 해당 이미지파일이 반환됩니다."};
-				}else if(req.body["content"] === "시작하기"){
-					messages["message"] = {"text" : "오늘 하루도 행복한 하루되세요. *^^*"};
+				}else if(req.body["content"] === "지능형 UHD"){
+					messages["message"] = {"text" : "안녕하세요. 지능형 전자소송 UHD 입니다. 전자소송 이용시 궁금한 사항을 작성해 주세요."};
 				}else{
 					messages["message"] = {"text" : "명우니닷컴(http://myeonguni.com)에서 개발하였습니다."};
 				}
@@ -72,6 +72,10 @@ module.exports = function(app, fs)
 				      console.log(JSON.stringify(response, null, 2));
 				      var result1 = JSON.stringify(response, null, 2);
 				      console.log("결과 : " + result1);
+				      
+				      var result2 = JSON.parse(result1);
+				      console.log("결과2 : " + result2);
+				      
 				      fs.readFile( __dirname + "/../data/message.json", 'utf8',  function(err, data){
 							var messages = JSON.parse(data);
 							messages["message"] = {"text" : result1};
