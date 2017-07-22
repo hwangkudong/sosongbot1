@@ -74,7 +74,7 @@ module.exports = function(app, fs)
 				      console.log("결과 : " + result1);
 				      
 				      var result2 = JSON.parse(result1);
-				      var result3 = result2["class_name"]
+				      var result3 = result2.class_name;
 				      
 				      console.log("결과3 : " + result3);
 				      
