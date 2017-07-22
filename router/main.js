@@ -102,7 +102,7 @@ module.exports = function(app, fs)
 								// 결과 로그 출력
 								console.log("Request_user_key : "+req.body["user_key"]);
 								console.log("Request_type : keyboard - "+req.body["content"]);
-								res.end(data);
+								res.json(data);
 								return;
 							})
 						})
