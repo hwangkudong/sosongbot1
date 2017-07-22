@@ -80,13 +80,14 @@ module.exports = function(app, fs)
 				      
 				      var result3 = result2.classes;
 				      console.log("result3.length" + result3.length);
-				      var result3_1 =  JSON.parse(result3[0]);
-				      var result3_2 =  JSON.parse(result3[1]);
-				      var result3_3 =  JSON.parse(result3[2]);
-				      
-				      console.log("resule3_1 class_name : " + result3_1.class_name);
-				      console.log("resule3_2 class_name : " + result3_2.class_name);
-				      console.log("resule3_3 class_name : " + result3_3.class_name);
+				      console.log("result3" + result3);
+//				      var result3_1 =  JSON.parse(result3[0]);
+//				      var result3_2 =  JSON.parse(result3[1]);
+//				      var result3_3 =  JSON.parse(result3[2]);
+//				      
+//				      console.log("resule3_1 class_name : " + result3_1.class_name);
+//				      console.log("resule3_2 class_name : " + result3_2.class_name);
+//				      console.log("resule3_3 class_name : " + result3_3.class_name);
 
 				      
 				      fs.readFile( __dirname + "/../data/message.json", 'utf8',  function(err, data){
