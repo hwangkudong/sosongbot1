@@ -70,13 +70,18 @@ module.exports = function(app, fs)
 				      console.log('error:', err);
 				    else{
 				      console.log(JSON.stringify(response, null, 2));
+				      
 				      var result1 = JSON.stringify(response, null, 2);
-				      console.log("결과 : " + result1);
-				      
 				      var result2 = JSON.parse(result1);
-				      var result3 = result2.class_name;
 				      
-				      console.log("결과3 : " + result3);
+				      console.log("결과 : url" + result2.url);
+				      console.log("결과 : text" + result2.text);
+				      console.log("결과 : top_class" + result2.top_class);
+				      
+				      var result3 = result2.classes;
+				      
+				      console.log("result3.length" + result3.length);
+
 				      
 				      fs.readFile( __dirname + "/../data/message.json", 'utf8',  function(err, data){
 							var messages = JSON.parse(data);
