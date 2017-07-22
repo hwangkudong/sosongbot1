@@ -94,7 +94,7 @@ module.exports = function(app, fs)
 							var messages = JSON.parse(data);
 							console.log("messages : " + messages);
 							messages["message"] = {"text" : result2.text + "에 대하여 질문하셨네요. 아래 항목중 가장 유사한 질문을 고르시고 답변을 확인해 보세요."};
-							messages["keyboard"] = {"buttons" : result3[0].class_name};
+							messages["keyboard"] = {"type" : "buttons", "buttons" : result3[0].class_name};
 							fs.writeFile(__dirname + "/../data/msgkeyboard.json",
 									 JSON.stringify(messages, null, '\t'), "utf8", function(err, data){
 							})
