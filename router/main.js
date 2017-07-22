@@ -74,7 +74,9 @@ module.exports = function(app, fs)
 				      console.log("결과 : " + result1);
 				      
 				      var result2 = JSON.parse(result1);
-				      console.log("결과2 : " + result2);
+				      var result3 = result2["class_name"]
+				      
+				      console.log("결과3 : " + result3);
 				      
 				      fs.readFile( __dirname + "/../data/message.json", 'utf8',  function(err, data){
 							var messages = JSON.parse(data);
