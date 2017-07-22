@@ -83,23 +83,21 @@ module.exports = function(app, fs)
 				      console.log("result3" + result3);
 				      console.log("result[0]" + result3[0]);
 				      console.log("result[0].class_name" + result3[0].class_name);
-//				      var result3_1 =  JSON.parse(result3[0]);
-//				      var result3_2 =  JSON.parse(result3[1]);
-//				      var result3_3 =  JSON.parse(result3[2]);
+				     // var result3_1 =  { result[0].class_name, result[1].class_name, result[2].class_name };
 //				      
 //				      console.log("resule3_1 class_name : " + result3_1.class_name);
 //				      console.log("resule3_2 class_name : " + result3_2.class_name);
 //				      console.log("resule3_3 class_name : " + result3_3.class_name);
 
 				      
-				      fs.readFile( __dirname + "/../data/message.json", 'utf8',  function(err, data){
+				      fs.readFile( __dirname + "/../data/msgkeyboard.json", 'utf8',  function(err, data){
 							var messages = JSON.parse(data);
 							messages["message"] = {"text" : result2.text + "에 대하여 질문하셨네요. 아래 항목중 가장 유사한 질문을 고르시고 답변을 확인해 보세요."};
-					//		messages["keyboard"] = {"buttons" : result3_1.class_name, result3_2.class_name, result3_3.class_name};
-							fs.writeFile(__dirname + "/../data/message.json",
+							messages["keyboard"] = {"buttons" : result3[0]};
+							fs.writeFile(__dirname + "/../data/msgkeyboard.json",
 									 JSON.stringify(messages, null, '\t'), "utf8", function(err, data){
 							})
-							fs.readFile( __dirname + "/../data/message.json", 'utf8', function (err, data) {
+							fs.readFile( __dirname + "/../data/msgkeyboard.json", 'utf8', function (err, data) {
 								// 결과 로그 출력
 								console.log("Request_user_key : "+req.body["user_key"]);
 								console.log("Request_type : keyboard - "+req.body["content"]);
