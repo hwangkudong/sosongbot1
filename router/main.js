@@ -82,6 +82,7 @@ module.exports = function(app, fs)
 				      console.log("result3.length" + result3.length);
 				      console.log("result3" + result3);
 				      console.log("result[0]" + result3[0]);
+				      console.log("result[0].class_name" + result3[0].class_name);
 //				      var result3_1 =  JSON.parse(result3[0]);
 //				      var result3_2 =  JSON.parse(result3[1]);
 //				      var result3_3 =  JSON.parse(result3[2]);
