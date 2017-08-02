@@ -1,12 +1,1 @@
-{
-	"plugins": {
-		"node": {},
-		"express": {}
-	},
-	"ecmaVersion": 6,
-	"libs": [
-		"ecma5",
-		"ecma6"
-	],
-	"loadEagerly": []
-}
+{"plugins":{"node":{},"express":{}},"ecmaVersion":6,"libs":["ecma5","ecma6"],"loadEagerly":[],"ide":{}}

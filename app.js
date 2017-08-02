@@ -15,8 +15,8 @@ var cfenv = require('cfenv');
 // create a new express server
 var app = express();
 
-// serve the files out of ./public as our main files
-//app.use(express.static(__dirname + '/public'));
+// public 폴더를 정적자원 디렉토리로 지정
+app.use(express.static(__dirname + '/public'));
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
@@ -27,17 +27,19 @@ app.listen(appEnv.port, '0.0.0.0', function() {
   console.log("server starting on " + appEnv.url);
 });
 
-// 키보드
-app.get('/keyboard', (req, res) => {
-	
- console.log('APIs initialize');
-	
-  const menu = {
-      type: 'buttons',
-      buttons: ["메뉴1", "메뉴2", "메뉴3"]
-  };
 
-  res.set({
-      'content-type': 'application/json'
-  }).send(JSON.stringify(menu));
-});
+
+// 키보드
+//app.get('/keyboard', (req, res) => {
+//	
+// console.log('APIs initialize');
+//	
+//  const menu = {
+//      type: 'buttons',
+//      buttons: ["메뉴1", "메뉴2", "메뉴3"]
+//  };
+//
+//  res.set({
+//      'content-type': 'application/json'
+//  }).send(JSON.stringify(menu));
+//});

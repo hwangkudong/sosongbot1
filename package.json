@@ -12,7 +12,8 @@
 		"express-session": "~1.13.0",
 		"request": "~2.74.0",
 		"encodeuri-safe": "~0.0.1",
-		"watson-developer-cloud": "latest"
+		"watson-developer-cloud": "latest",
+	    "mongoose": "^4.11.1"		
 	},
 	"repository": {},
 	"engines": {
