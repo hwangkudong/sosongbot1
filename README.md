@@ -1,15 +1,22 @@
-# Node.js Hello World Sample
 
-This application demonstrates a simple, reusable Node.js web application based on the Express framework.
+     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
+    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
+    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
+    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
+     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
+    ----------------------------------------------------------------- 
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/IBM-Bluemix/nodejs-helloworld)
 
-## Run the app locally
+Welcome to your Node.js project on Cloud9 IDE!
 
-1. [Install Node.js][]
-+ cd into this project's root directory
-+ Run `npm install` to install the app's dependencies
-+ Run `npm start` to start the app
-+ Access the running app in a browser at <http://localhost:6001>
+This chat example showcases how to use `socket.io` with a static `express` server.
 
-[Install Node.js]: https://nodejs.org/en/download/
+## Running the server
+
+1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
+
+2) Alternatively you can launch the app from the Terminal:
+
+    $ node server.js
+
+Once the server is running, open the project in the shape of 'https://projectname-username.c9users.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.

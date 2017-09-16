@@ -1,0 +1,98 @@
+[
+                {
+                "menu_nm": "HOME", 
+                "content": "안녕하세요.\n소송지원봇입니다.\n무엇을 도와드릴까요?\n아래의 메뉴에서 선택하시기 바랍니다.",
+                "button":  "사이버 소송 도우미,지능형 UHD",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "사이버 소송 도우미", 
+                "content": "사이버 소송도우미 입니다.\n원하시는 메뉴를 선택하시기 바랍니다.",
+                "button": "소송 준비 안내,소송 절차 안내,소장 작성하기,이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "지능형 UHD", 
+                "content": "지능형 UHD 입니다.\n질문을 입력해 주시기 바랍니다.",
+                "button": "검색,이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소송 준비 안내", 
+                "content": "소송 준비 안내 메뉴를 선택하였습니다. 아래 메뉴를 선택하셔서 소송을 준비해 보세요.",
+                "button": "소송의 개념,소송의 유형,소송비용,이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소송 절차 안내", 
+                "content": "소송 절차를 선택하셨습니다. 아래 메뉴를 선택하셔서 소송 절차에 대해 알아 보세요.",
+                "button": "소의 절차,소의 제기,서면에 의한 준비,이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소장 작성하기", 
+                "content": "소장 작성하기를 선택하셨습니다. 아래 메뉴를 선택하셔서 소장 작성을 진행해 보세요.",
+                "button": "소장작성,소장 주요 기재사항 조회,양식보기,사건명 검색 및 선택,이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소송의 개념", 
+                "content": "소송의 개념 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소송의 유형", 
+                "content": "소송의 유형 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소송비용", 
+                "content": "소송비용 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소의 절차", 
+                "content": "소의 절차 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true                
+                },
+                {
+                "menu_nm": "소의 제기", 
+                "content": "소의 제기 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "서면에 의한 준비", 
+                "content": "서면에 의한 준비 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소장작성", 
+                "content": "소장 작성 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "소장 주요 기재사항 조회", 
+                "content": "소장 주요 기재사항 조회 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "양식보기", 
+                "content": "양식보기 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                },
+                {
+                "menu_nm": "사건명 검색 및 선택", 
+                "content": "사건명 검색 및 선택 링크",
+                "button": "이전 메뉴",
+                "isnew"  : true
+                }
+]

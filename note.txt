@@ -1,0 +1,860 @@
+    /*
+    sosongbot.find({menu_nm:'HOME'}, function(err, sosongbots) {
+     
+      if(err) {
+        return res.status(500).send({error:'no data'});
+      } else {
+        
+        
+        res.render('index', { title: sosongbots[0].menu_nm, content: sosongbots[0].content, button: sosongbots[0].button });  
+      }
+    }) 
+    */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////    
+    
+  /*
+  app.get('/', function(req, res) {
+    
+    console.log('index.js .....');
+    
+    sosongbot.find(function(err, sosongbots) {
+     
+      if(err) return res.status(500).send({error:'no data'});
+      res.json(sosongbots);
+    })  
+  });
+  */
+  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////      
+    
+    /*
+    sosongbot.find({menu_nm:'HOME'}, function(err, sosongbots) {
+     
+      if(err) {
+        return res.status(500).send({error:'no data'});
+      } else {
+        
+        
+        res.render('index', { title: sosongbots[0].menu_nm, content: sosongbots[0].content, button: sosongbots[0].button });  
+      }
+    }) 
+    */
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////      
+
+
+
+
+
+
+
+//설치
+$ sudo apt-get update
+
+# latest stable version 설치
+$ sudo apt-get install -y mongodb-org
+
+
+//데이터파일 만들기
+mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"
+
+
+//설치 중 정보
+ooohahhh:~/workspace $ sudo apt-get update
+Ign http://downloads-distro.mongodb.org dist InRelease
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Ign http://asia-east1.gce.clouds.archive.ubuntu.com trusty InRelease
+Hit http://downloads-distro.mongodb.org dist Release.gpg
+Ign http://toolbelt.heroku.com ./ InRelease
+Get:2 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://downloads-distro.mongodb.org dist Release
+Get:3 http://security.ubuntu.com trusty-security/main Sources [169 kB]
+Get:4 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports InRelease [65.9 kB]
+Get:5 http://toolbelt.heroku.com ./ Release.gpg [473 B]
+Get:6 http://asia-east1.gce.clouds.archive.ubuntu.com trusty Release.gpg [933 B]
+Hit http://downloads-distro.mongodb.org dist/10gen amd64 Packages
+Get:7 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/main Sources [495 kB]
+Get:8 http://security.ubuntu.com trusty-security/universe Sources [71.2 kB]
+Get:9 http://toolbelt.heroku.com ./ Release [1609 B]
+Hit http://downloads-distro.mongodb.org dist/10gen i386 Packages
+Get:10 http://security.ubuntu.com trusty-security/main amd64 Packages [781 kB]
+Get:11 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/restricted Sources [6470 B]
+Get:12 http://toolbelt.heroku.com ./ Packages [636 B]
+Get:13 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/universe Sources [234 kB]
+Get:14 http://security.ubuntu.com trusty-security/universe amd64 Packages [221 kB]
+Get:15 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/multiverse Sources [7656 B]
+Get:16 http://security.ubuntu.com trusty-security/main i386 Packages [722 kB]
+Get:17 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/main amd64 Packages [1245 kB]
+Get:18 http://security.ubuntu.com trusty-security/universe i386 Packages [222 kB]
+Get:19 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/restricted amd64 Packages [21.2 kB]
+Get:20 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/universe amd64 Packages [540 kB]
+Get:21 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [15.6 kB]
+Get:22 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/main i386 Packages [1184 kB]
+Get:23 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/restricted i386 Packages [20.9 kB]
+Get:24 http://ppa.launchpad.net trusty InRelease [15.5 kB]
+Get:25 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/universe i386 Packages [542 kB]
+Get:26 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/multiverse i386 Packages [16.1 kB]
+Get:27 http://ppa.launchpad.net trusty InRelease [15.4 kB]
+Get:28 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/main Sources [10.4 kB]
+Get:29 http://ppa.launchpad.net trusty/main amd64 Packages [23.2 kB]
+Get:30 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/restricted Sources [40 B]
+Get:31 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/universe Sources [41.2 kB]
+Get:32 http://ppa.launchpad.net trusty/main i386 Packages [23.2 kB]
+Get:33 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/multiverse Sources [1751 B]
+Get:34 http://ppa.launchpad.net trusty/main amd64 Packages [3427 B]
+Get:35 http://ppa.launchpad.net trusty/main i386 Packages [3427 B]
+Get:36 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/main amd64 Packages [14.8 kB]
+Get:37 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/restricted amd64 Packages [40 B]
+Get:38 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/universe amd64 Packages [52.6 kB]
+Get:39 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/multiverse amd64 Packages [1396 B]
+Get:40 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/main i386 Packages [14.8 kB]
+Get:41 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/restricted i386 Packages [40 B]
+Get:42 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/universe i386 Packages [52.6 kB]
+Get:43 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/multiverse i386 Packages [1381 B]
+Get:44 http://asia-east1.gce.clouds.archive.ubuntu.com trusty Release [58.5 kB]
+Get:45 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/main Sources [1335 kB]
+Get:46 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/restricted Sources [5335 B]
+Get:47 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/universe Sources [7926 kB]
+Get:48 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/multiverse Sources [211 kB]
+Get:49 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+Get:50 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+Get:51 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+Get:52 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/multiverse amd64 Packages [169 kB]
+Get:53 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/main i386 Packages [1739 kB]
+Get:54 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/restricted i386 Packages [16.4 kB]
+Get:55 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/universe i386 Packages [7597 kB]
+Get:56 http://asia-east1.gce.clouds.archive.ubuntu.com trusty/multiverse i386 Packages [172 kB]
+Fetched 35.6 MB in 19s (1802 kB/s)
+Reading package lists... Done
+W: Size of file /var/lib/apt/lists/toolbelt.heroku.com_ubuntu_._Packages.gz is not what the server reported 636 721
+W: Size of file /var/lib/apt/lists/ppa.launchpad.net_fkrull_deadsnakes_ubuntu_dists_trusty_main_binary-amd64_Packages.gz is not what the server reported 23171 23198
+W: Size of file /var/lib/apt/lists/ppa.launchpad.net_fkrull_deadsnakes_ubuntu_dists_trusty_main_binary-i386_Packages.gz is not what the server reported 23183 23195
+
+
+ooohahhh:~/workspace $ sudo apt-get install -y mongodb-org
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  mongodb-org-mongos mongodb-org-server mongodb-org-shell mongodb-org-tools
+The following NEW packages will be installed:
+  mongodb-org mongodb-org-mongos mongodb-org-server mongodb-org-shell
+  mongodb-org-tools
+0 upgraded, 5 newly installed, 0 to remove and 116 not upgraded.
+Need to get 116 MB of archives.
+After this operation, 293 MB of additional disk space will be used.
+Get:1 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org-shell amd64 2.6.12 [4479 kB]
+Get:2 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org-server amd64 2.6.12 [9541 kB]
+Get:3 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org-mongos amd64 2.6.12 [7214 kB]
+Get:4 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org-tools amd64 2.6.12 [94.5 MB]
+Get:5 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org amd64 2.6.12 [3650 B]
+Fetched 116 MB in 20s (5660 kB/s)
+Selecting previously unselected package mongodb-org-shell.
+(Reading database ... 74778 files and directories currently installed.)
+Preparing to unpack .../mongodb-org-shell_2.6.12_amd64.deb ...
+Unpacking mongodb-org-shell (2.6.12) ...
+Selecting previously unselected package mongodb-org-server.
+Preparing to unpack .../mongodb-org-server_2.6.12_amd64.deb ...
+Unpacking mongodb-org-server (2.6.12) ...
+Selecting previously unselected package mongodb-org-mongos.
+Preparing to unpack .../mongodb-org-mongos_2.6.12_amd64.deb ...
+Unpacking mongodb-org-mongos (2.6.12) ...
+Selecting previously unselected package mongodb-org-tools.
+Preparing to unpack .../mongodb-org-tools_2.6.12_amd64.deb ...
+Unpacking mongodb-org-tools (2.6.12) ...
+Selecting previously unselected package mongodb-org.
+Preparing to unpack .../mongodb-org_2.6.12_amd64.deb ...
+Unpacking mongodb-org (2.6.12) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mongodb-org-shell (2.6.12) ...
+Setting up mongodb-org-server (2.6.12) ...
+Adding system user `mongodb' (UID 112) ...
+Adding new user `mongodb' (UID 112) with group `nogroup' ...
+Not creating home directory `/home/mongodb'.
+Adding group `mongodb' (GID 119) ...
+Done.
+Adding user `mongodb' to group `mongodb' ...
+Adding user mongodb to group mongodb
+Done.
+Setting up mongodb-org-mongos (2.6.12) ...
+Setting up mongodb-org-tools (2.6.12) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mongodb-org (2.6.12) ...
+ooohahhh:~/workspace $ sudo service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:~/workspace $ cat /var/log/mongodb/mongod.log
+cat: /var/log/mongodb/mongod.log: No such file or directory
+ooohahhh:~/workspace $ cat /var/log/mongodb/mongod.log
+cat: /var/log/mongodb/mongod.log: No such file or directory
+ooohahhh:~/workspace $ sudo service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:~/workspace $ ls
+README.md  client/  memo  node_modules/  package.json  server.js  views/
+ooohahhh:~/workspace $ cd ..
+ooohahhh:~ $ ls
+lib/  workspace/
+ooohahhh:~ $ cd ..
+ooohahhh:/home $ ls
+ubuntu/
+ooohahhh:/home $ cd ..
+ooohahhh:/ $ ls
+bin/  boot/  data/  dev/  etc/  home/  lib/  lib64/  lost+found/  media/  mnt/  nix/  opt/  proc/  root/  run/  sbin/  srv/  sys/  tmp/  usr/  var/
+ooohahhh:/ $ cd bin
+ooohahhh:/bin $ ls
+bash*          checkpassword*         dmesg@          grep*      loadkeys*    mv*                ntfsdump_logfile*         ps*                    sleep*            unicode_start*
+bunzip2*       chgrp*                 dnsdomainname@  gunzip*    login*       nano*              ntfsfix*                  pwd*                   ss*               vdir*
+bzcat*         chmod*                 domainname@     gzexe*     loginctl*    nc@                ntfsinfo*                 rbash@                 stty*             which*
+bzcmp@         chown*                 dumpkeys*       gzip*      lowntfs-3g*  nc.openbsd*        ntfsls*                   readlink*              su*               whiptail*
+bzdiff*        chvt*                  echo*           hostname*  ls*          netcat@            ntfsmftalloc*             rm*                    sync@             ypdomainname@
+bzegrep@       cp*                    egrep*          ip*        lsblk*       netstat*           ntfsmove*                 rmdir*                 tailf*            zcat*
+bzexe*         cpio*                  false*          kbd_mode*  lsmod@       nisdomainname@     ntfstruncate*             rnano@                 tar*              zcmp*
+bzfgrep@       dash*                  fgconsole*      kill*      mkdir*       ntfs-3g*           ntfswipe*                 run-parts*             tempfile*         zdiff*
+bzgrep*        date*                  fgetty-login*   kmod*      mknod*       ntfs-3g.probe*     open@                     running-in-container*  touch*            zegrep*
+bzip2*         dbus-cleanup-sockets*  fgetty-login2*  less*      mktemp*      ntfs-3g.secaudit*  openvt*                   sed*                   true*             zfgrep*
+bzip2recover*  dbus-daemon*           fgrep*          lessecho*  more*        ntfs-3g.usermap*   pidof@                    setfacl*               udevadm*          zforce*
+bzless@        dbus-uuidgen*          findmnt*        lessfile@  mount*       ntfscat*           ping*                     setfont*               ulockmgr_server*  zgrep*
+bzmore*        dd*                    fuser*          lesskey*   mountpoint*  ntfsck*            ping6*                    setupcon*              umount*           zless*
+cat*           df*                    fusermount*     lesspipe*  mt@          ntfscluster*       plymouth*                 sh@                    uname*            zmore*
+chacl*         dir*                   getfacl*        ln*        mt-gnu*      ntfscmp*           plymouth-upstart-bridge*  sh.distrib@            uncompress*       znew*
+ooohahhh:/bin $ ls -al mong*
+ls: cannot access mong*: No such file or directory
+ooohahhh:/bin $ ll
+total 7940
+drwxr-xr-x   2 root root    4096 Jul  8 02:34 ./
+drwxr-xr-x 178 root root    4096 Jul  8 03:37 ../
+-rwxr-xr-x   1 root root 1021112 Oct  7  2014 bash*
+-rwxr-xr-x   3 root root   31152 Oct 21  2013 bunzip2*
+-rwxr-xr-x   3 root root   31152 Oct 21  2013 bzcat*
+lrwxrwxrwx   1 root root       6 Oct 21  2013 bzcmp -> bzdiff*
+-rwxr-xr-x   1 root root    2140 Oct 21  2013 bzdiff*
+lrwxrwxrwx   1 root root       6 Oct 21  2013 bzegrep -> bzgrep*
+-rwxr-xr-x   1 root root    4877 Oct 21  2013 bzexe*
+lrwxrwxrwx   1 root root       6 Oct 21  2013 bzfgrep -> bzgrep*
+-rwxr-xr-x   1 root root    3642 Oct 21  2013 bzgrep*
+-rwxr-xr-x   3 root root   31152 Oct 21  2013 bzip2*
+-rwxr-xr-x   1 root root   14480 Oct 21  2013 bzip2recover*
+lrwxrwxrwx   1 root root       6 Oct 21  2013 bzless -> bzmore*
+-rwxr-xr-x   1 root root    1297 Oct 21  2013 bzmore*
+-rwxr-xr-x   1 root root   47904 Mar 10  2016 cat*
+-rwxr-xr-x   1 root root   14688 May 23  2013 chacl*
+-rwxr-xr-x   1 root root   12792 Mar 17  2008 checkpassword*
+-rwxr-xr-x   1 root root   60160 Mar 10  2016 chgrp*
+-rwxr-xr-x   1 root root   56032 Mar 10  2016 chmod*
+-rwxr-xr-x   1 root root   60160 Mar 10  2016 chown*
+-rwxr-xr-x   1 root root   10480 Feb 18  2013 chvt*
+-rwxr-xr-x   1 root root  130304 Mar 10  2016 cp*
+-rwxr-xr-x   1 root root  137304 Feb 18  2016 cpio*
+-rwxr-xr-x   1 root root  121272 Feb 19  2014 dash*
+-rwxr-xr-x   1 root root   60160 Mar 10  2016 date*
+-rwxr-xr-x   1 root root   10536 Dec  7  2016 dbus-cleanup-sockets*
+-rwxr-xr-x   1 root root  434032 Dec  7  2016 dbus-daemon*
+-rwxr-xr-x   1 root root   10464 Dec  7  2016 dbus-uuidgen*
+-rwxr-xr-x   1 root root   56136 Mar 10  2016 dd*
+-rwxr-xr-x   1 root root   97768 Mar 10  2016 df*
+-rwxr-xr-x   1 root root  110080 Mar 10  2016 dir*
+lrwxrwxrwx   1 root root       9 Jul  8 02:34 dmesg -> /bin/true*
+lrwxrwxrwx   1 root root       8 Dec 13  2013 dnsdomainname -> hostname*
+lrwxrwxrwx   1 root root       8 Dec 13  2013 domainname -> hostname*
+-rwxr-xr-x   1 root root   82256 Feb 18  2013 dumpkeys*
+-rwxr-xr-x   1 root root   31296 Mar 10  2016 echo*
+-rwxr-xr-x   1 root root  183696 Jan 18  2014 egrep*
+-rwxr-xr-x   1 root root   27168 Mar 10  2016 false*
+-rwxr-xr-x   1 root root   10488 Feb 18  2013 fgconsole*
+-rwxr-xr-x   1 root root    3592 Mar 17  2008 fgetty-login*
+-rwxr-xr-x   1 root root    6968 Mar 17  2008 fgetty-login2*
+-rwxr-xr-x   1 root root  138352 Jan 18  2014 fgrep*
+-rwxr-xr-x   1 root root   36144 Nov 23  2016 findmnt*
+-rwxr-xr-x   1 root root   31864 Nov 29  2012 fuser*
+-rwsr-xr-x   1 root root   30800 May 15  2015 fusermount*
+-rwxr-xr-x   1 root root   23688 May 23  2013 getfacl*
+-rwxr-xr-x   1 root root  191952 Jan 18  2014 grep*
+-rwxr-xr-x   2 root root    2303 Jan 10  2014 gunzip*
+-rwxr-xr-x   1 root root    5937 Jan 10  2014 gzexe*
+-rwxr-xr-x   1 root root   94048 Jan 10  2014 gzip*
+-rwxr-xr-x   1 root root   14736 Dec 13  2013 hostname*
+-rwxr-xr-x   1 root root  307328 Jul 23  2015 ip*
+-rwxr-xr-x   1 root root   10480 Feb 18  2013 kbd_mode*
+-rwxr-xr-x   1 root root   23088 Feb 10  2015 kill*
+-rwxr-xr-x   1 root root  154616 Apr 10  2014 kmod*
+-rwxr-xr-x   1 root root  153664 Jun 10  2013 less*
+-rwxr-xr-x   1 root root   10440 Jun 10  2013 lessecho*
+lrwxrwxrwx   1 root root       8 Jun 10  2013 lessfile -> lesspipe*
+-rwxr-xr-x   1 root root   15912 Jun 10  2013 lesskey*
+-rwxr-xr-x   1 root root    7758 Jun 10  2013 lesspipe*
+-rwxr-xr-x   1 root root   56072 Mar 10  2016 ln*
+-rwxr-xr-x   1 root root  111432 Feb 18  2013 loadkeys*
+-rwxr-xr-x   1 root root   49168 Jan 27  2016 login*
+-rwxr-xr-x   1 root root   92328 Feb  7 11:06 loginctl*
+-rwxr-xr-x   1 root root   63912 Dec 18  2013 lowntfs-3g*
+-rwxr-xr-x   1 root root  110080 Mar 10  2016 ls*
+-rwxr-xr-x   1 root root   44688 Nov 23  2016 lsblk*
+lrwxrwxrwx   1 root root       4 Apr 10  2014 lsmod -> kmod*
+-rwxr-xr-x   1 root root   51936 Mar 10  2016 mkdir*
+-rwxr-xr-x   1 root root   35456 Mar 10  2016 mknod*
+-rwxr-xr-x   1 root root   39648 Mar 10  2016 mktemp*
+-rwxr-xr-x   1 root root   39600 Nov 23  2016 more*
+-rwsr-xr-x   1 root root   94792 Nov 23  2016 mount*
+-rwxr-xr-x   1 root root   10456 Feb 17  2016 mountpoint*
+lrwxrwxrwx   1 root root      20 Jan 19 02:58 mt -> /etc/alternatives/mt*
+-rwxr-xr-x   1 root root   68760 Feb 18  2016 mt-gnu*
+-rwxr-xr-x   1 root root  122088 Mar 10  2016 mv*
+-rwxr-xr-x   1 root root  192008 Oct  1  2012 nano*
+lrwxrwxrwx   1 root root      20 Jan 19 03:00 nc -> /etc/alternatives/nc*
+-rwxr-xr-x   1 root root   31248 Dec  4  2012 nc.openbsd*
+lrwxrwxrwx   1 root root      24 Jan 19 03:00 netcat -> /etc/alternatives/netcat*
+-rwxr-xr-x   1 root root  119624 Aug  5  2014 netstat*
+lrwxrwxrwx   1 root root       8 Dec 13  2013 nisdomainname -> hostname*
+-rwxr-xr-x   1 root root   59848 Dec 18  2013 ntfs-3g*
+-rwxr-xr-x   1 root root   10312 Dec 18  2013 ntfs-3g.probe*
+-rwxr-xr-x   1 root root   67608 Dec 18  2013 ntfs-3g.secaudit*
+-rwxr-xr-x   1 root root   18432 Dec 18  2013 ntfs-3g.usermap*
+-rwxr-xr-x   1 root root   26728 Dec 18  2013 ntfscat*
+-rwxr-xr-x   1 root root   30752 Dec 18  2013 ntfsck*
+-rwxr-xr-x   1 root root   30824 Dec 18  2013 ntfscluster*
+-rwxr-xr-x   1 root root   34920 Dec 18  2013 ntfscmp*
+-rwxr-xr-x   1 root root   22528 Dec 18  2013 ntfsdump_logfile*
+-rwxr-xr-x   1 root root   39024 Dec 18  2013 ntfsfix*
+-rwxr-xr-x   1 root root   55416 Dec 18  2013 ntfsinfo*
+-rwxr-xr-x   1 root root   31928 Dec 18  2013 ntfsls*
+-rwxr-xr-x   1 root root   26672 Dec 18  2013 ntfsmftalloc*
+-rwxr-xr-x   1 root root   30824 Dec 18  2013 ntfsmove*
+-rwxr-xr-x   1 root root   34856 Dec 18  2013 ntfstruncate*
+-rwxr-xr-x   1 root root   43632 Dec 18  2013 ntfswipe*
+lrwxrwxrwx   1 root root       6 Feb 18  2013 open -> openvt*
+-rwxr-xr-x   1 root root   18912 Feb 18  2013 openvt*
+lrwxrwxrwx   1 root root      14 Feb 17  2016 pidof -> /sbin/killall5*
+-rwsr-xr-x   1 root root   44168 May  7  2014 ping*
+-rwsr-xr-x   1 root root   44680 May  7  2014 ping6*
+-rwxr-xr-x   1 root root   35448 Dec  2  2014 plymouth*
+-rwxr-xr-x   1 root root   31608 Dec  2  2014 plymouth-upstart-bridge*
+-rwxr-xr-x   1 root root   93232 Feb 10  2015 ps*
+-rwxr-xr-x   1 root root   31392 Mar 10  2016 pwd*
+lrwxrwxrwx   1 root root       4 Oct  7  2014 rbash -> bash*
+-rwxr-xr-x   1 root root   39528 Mar 10  2016 readlink*
+-rwxr-xr-x   1 root root   60160 Mar 10  2016 rm*
+-rwxr-xr-x   1 root root   43648 Mar 10  2016 rmdir*
+lrwxrwxrwx   1 root root       4 Oct  1  2012 rnano -> nano*
+-rwxr-xr-x   1 root root   19248 Aug 28  2013 run-parts*
+-rwxr-xr-x   1 root root     254 Jul 18  2014 running-in-container*
+-rwxr-xr-x   1 root root   73352 Feb 13  2014 sed*
+-rwxr-xr-x   1 root root   36232 May 23  2013 setfacl*
+-rwxr-xr-x   1 root root   39896 Feb 18  2013 setfont*
+-rwxr-xr-x   1 root root   12052 Jan 29  2014 setupcon*
+lrwxrwxrwx   1 root root       4 Feb 19  2014 sh -> dash*
+lrwxrwxrwx   1 root root       4 Feb 19  2014 sh.distrib -> dash*
+-rwxr-xr-x   1 root root   31296 Mar 10  2016 sleep*
+-rwxr-xr-x   1 root root   76624 Jul 23  2015 ss*
+-rwxr-xr-x   1 root root   68256 Mar 10  2016 stty*
+-rwsr-xr-x   1 root root   36936 Jan 27  2016 su*
+lrwxrwxrwx   1 root root       9 Jul  8 02:34 sync -> /bin/true*
+-rwxr-xr-x   1 root root   18816 Nov 23  2016 tailf*
+-rwxr-xr-x   1 root root  353840 Nov 17  2016 tar*
+-rwxr-xr-x   1 root root   10344 Aug 28  2013 tempfile*
+-rwxr-xr-x   1 root root   60224 Mar 10  2016 touch*
+-rwxr-xr-x   1 root root   27168 Mar 10  2016 true*
+-rwxr-xr-x   1 root root  248040 Nov 10  2016 udevadm*
+-rwxr-xr-x   1 root root   14336 May 15  2015 ulockmgr_server*
+-rwsr-xr-x   1 root root   69120 Nov 23  2016 umount*
+-rwxr-xr-x   1 root root   31360 Mar 10  2016 uname*
+-rwxr-xr-x   2 root root    2303 Jan 10  2014 uncompress*
+-rwxr-xr-x   1 root root    2762 Feb 18  2013 unicode_start*
+-rwxr-xr-x   1 root root  110080 Mar 10  2016 vdir*
+-rwxr-xr-x   1 root root     946 Aug 28  2013 which*
+-rwxr-xr-x   1 root root   27368 Mar 23  2014 whiptail*
+lrwxrwxrwx   1 root root       8 Dec 13  2013 ypdomainname -> hostname*
+-rwxr-xr-x   1 root root    1939 Jan 10  2014 zcat*
+-rwxr-xr-x   1 root root    1779 Jan 10  2014 zcmp*
+-rwxr-xr-x   1 root root    5766 Jan 10  2014 zdiff*
+-rwxr-xr-x   1 root root     142 Jan 10  2014 zegrep*
+-rwxr-xr-x   1 root root     142 Jan 10  2014 zfgrep*
+-rwxr-xr-x   1 root root    2133 Jan 10  2014 zforce*
+-rwxr-xr-x   1 root root    5940 Jan 10  2014 zgrep*
+-rwxr-xr-x   1 root root    2039 Jan 10  2014 zless*
+-rwxr-xr-x   1 root root    1912 Jan 10  2014 zmore*
+-rwxr-xr-x   1 root root    5049 Jan 10  2014 znew*
+ooohahhh:/bin $ cd
+ooohahhh:~ $ ll
+total 104
+drwxr-xr-x 23 ubuntu ubuntu 4096 Jul  8 02:02 ./
+drwxr-xr-x 16 root   root   4096 Jul  7 08:58 ../
+-rw-r--r--  1 ubuntu ubuntu  314 Feb 20 02:33 .bash_aliases
+-rw-r--r--  1 ubuntu ubuntu  220 Apr  9  2014 .bash_logout
+-rw-r--r--  1 ubuntu ubuntu 1651 Feb 20 02:33 .bashrc
+drwxr-xr-x  4 ubuntu ubuntu 4096 Jul  8 02:34 .c9/
+drwxr-xr-x  3 ubuntu ubuntu 4096 Feb 20 02:51 .cache/
+drwxr-xr-x  3 ubuntu ubuntu 4096 Feb 20 02:51 .config/
+drwxrwxr-x  3 ubuntu ubuntu 4096 Feb 20 02:50 .gem/
+-rw-r--r--  1 ubuntu ubuntu   52 Feb 20 02:33 .gemrc
+-rw-r--r--  1 ubuntu ubuntu  226 Jul  7 08:59 .gitconfig
+-rw-r--r--  1 ubuntu ubuntu  494 Feb 20 02:33 .gitignore
+drwx------  2 ubuntu ubuntu 4096 Feb 20 02:49 .gnupg/
+drwxr-xr-x  2 ubuntu ubuntu 4096 Feb 20 02:51 .heroku/
+-rw-r--r--  1 ubuntu ubuntu  494 Feb 20 02:52 .hgignore
+-rw-r--r--  1 ubuntu ubuntu   65 Jul  7 08:59 .hgrc
+drwxr-xr-x  3 ubuntu ubuntu 4096 Feb 20 02:51 .local/
+drwxr-xr-x  3 ubuntu ubuntu 4096 Feb 20 02:57 .node-gyp/
+drwxr-xr-x 86 ubuntu ubuntu 4096 Jul  8 02:19 .npm/
+-rw-------  1 ubuntu ubuntu   15 Feb 20 02:36 .npmrc
+drwxr-xr-x 12 ubuntu ubuntu 4096 Feb 20 02:57 .nvm/
+-rw-r--r--  1 ubuntu ubuntu 1258 Feb 20 02:56 .profile
+-rw-r--r--  1 ubuntu ubuntu  860 Feb 20 02:36 .profileE
+drwxr-xr-x  2 ubuntu ubuntu 4096 Jul  8 02:34 .ssh/
+drwxr-xr-x  3 ubuntu ubuntu 4096 Feb 20 02:52 lib/
+drwxr-xr-x  8 ubuntu ubuntu 4096 Jul  8 03:38 workspace/
+ooohahhh:~ $ cd
+ooohahhh:~ $ cd workspace
+ooohahhh:~/workspace $ ls
+README.md  client/  memo  node_modules/  package.json  server.js  views/
+ooohahhh:~/workspace $ sudo apt-get uninstall mongodb
+E: Invalid operation uninstall
+ooohahhh:~/workspace $ sudo apt-get remove mongodb
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Package 'mongodb' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 116 not upgraded.
+ooohahhh:~/workspace $ sudo apt-get install -y mongodb-org
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+mongodb-org is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 116 not upgraded.
+ooohahhh:~/workspace $ sudo service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:~/workspace $ mongo
+MongoDB shell version: 2.6.12
+connecting to: test
+2017-07-08T03:43:26.535+0000 warning: Failed to connect to 127.0.0.1:27017, reason: errno:111 Connection refused
+2017-07-08T03:43:26.536+0000 Error: couldn't connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146
+exception: connect failed
+ooohahhh:~/workspace $ npm install mongo --save
+npm WARN package.json chat-example@0.0.0 No repository field.
+npm WARN package.json chat-example@0.0.0 No license field.
+mongo@0.1.0 node_modules/mongo
+└── mongodb@2.2.30 (es6-promise@3.2.1, mongodb-core@2.1.14, readable-stream@2.2.7)
+ooohahhh:~/workspace $ ll
+total 32
+drwxr-xr-x  8 ubuntu ubuntu 4096 Jul  8 03:44 ./
+drwxr-xr-x 23 ubuntu ubuntu 4096 Jul  8 02:02 ../
+drwxr-xr-x  3 ubuntu ubuntu 4096 Jul  8 01:56 .c9/
+-rw-r--r--  1 ubuntu ubuntu 1001 Feb 20 02:33 README.md
+drwxr-xr-x  8 ubuntu ubuntu 4096 Feb 20 02:57 client/
+-rw-r--r--  1 ubuntu ubuntu    0 Jul  8 03:37 memo
+drwxr-xr-x  9 ubuntu ubuntu 4096 Jul  8 03:44 node_modules/
+-rw-r--r--  1 ubuntu ubuntu  460 Jul  8 03:44 package.json
+-rw-r--r--  1 ubuntu ubuntu    0 Jul  8 03:27 server.js
+drwxr-xr-x  2 ubuntu ubuntu 4096 Jul  8 02:12 views/
+ooohahhh:~/workspace $ mongo
+MongoDB shell version: 2.6.12
+connecting to: test
+2017-07-08T03:45:32.492+0000 warning: Failed to connect to 127.0.0.1:27017, reason: errno:111 Connection refused
+2017-07-08T03:45:32.492+0000 Error: couldn't connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146
+exception: connect failed
+ooohahhh:~/workspace $ mongo test
+MongoDB shell version: 2.6.12
+connecting to: test
+2017-07-08T03:45:46.584+0000 warning: Failed to connect to 127.0.0.1:27017, reason: errno:111 Connection refused
+2017-07-08T03:45:46.585+0000 Error: couldn't connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146
+exception: connect failed
+ooohahhh:~/workspace $ sudo service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:~/workspace $ service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:~/workspace $ start monto
+ooohahhh:~/workspace $ cat /var/log/mongdb/mongod.log
+cat: /var/log/mongdb/mongod.log: No such file or directory
+ooohahhh:~/workspace $ cd /var/log
+ooohahhh:/var/log $ ls
+alternatives.log  apt/           btmp      dbconfig-common/  dpkg.log  faillog         fsck/    mongodb/  mysql.err  nginx/       rabbitmq/  unattended-upgrades/  wtmp
+apache2/          bootstrap.log  couchdb/  dmesg             exim4/    fontconfig.log  lastlog  mysql/    mysql.log  postgresql/  redis/     upstart/
+ooohahhh:/var/log $
+ooohahhh:/var/log $
+ooohahhh:/var/log $
+ooohahhh:/var/log $ mongo
+MongoDB shell version: 2.6.12
+connecting to: test
+2017-07-08T03:47:47.440+0000 warning: Failed to connect to 127.0.0.1:27017, reason: errno:111 Connection refused
+2017-07-08T03:47:47.441+0000 Error: couldn't connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146
+exception: connect failed
+ooohahhh:/var/log $ mongo
+MongoDB shell version: 2.6.12
+connecting to: test
+2017-07-08T03:48:05.899+0000 warning: Failed to connect to 127.0.0.1:27017, reason: errno:111 Connection refused
+2017-07-08T03:48:05.900+0000 Error: couldn't connect to server 127.0.0.1:27017 (127.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:146
+exception: connect failed
+ooohahhh:/var/log $ mongo 172.0.0.1:27017
+MongoDB shell version: 2.6.12
+connecting to: 172.0.0.1:27017/test
+2017-07-08T03:48:21.900+0000 Error: couldn't connect to server 172.0.0.1:27017 (172.0.0.1), connection attempt failed at src/mongo/shell/mongo.js:148
+exception: connect failed
+ooohahhh:/var/log $ sudo service mongod stop
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod stop
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the stop(8) utility, e.g. stop mongod
+ooohahhh:/var/log $ sudo service mongod stop
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod stop
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the stop(8) utility, e.g. stop mongod
+ooohahhh:/var/log $ sodu apt-get purge mongodb-org*
+bash: sodu: command not found
+ooohahhh:/var/log $ sudo spt-get purge mongodb-org*
+sudo: spt-get: command not found
+ooohahhh:/var/log $ sudo apt-get purge mongodb-org*
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Note, selecting 'mongodb-org' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-shell' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-mongos' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-server' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-shell' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-tools' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-mongos' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-unstable-server' for regex 'mongodb-org*'
+Note, selecting 'mongodb-org-tools' for regex 'mongodb-org*'
+Package 'mongodb-org-unstable' is not installed, so not removed
+Package 'mongodb-org-unstable-mongos' is not installed, so not removed
+Package 'mongodb-org-unstable-server' is not installed, so not removed
+Package 'mongodb-org-unstable-shell' is not installed, so not removed
+Package 'mongodb-org-unstable-tools' is not installed, so not removed
+The following packages will be REMOVED:
+  mongodb-org* mongodb-org-mongos* mongodb-org-server* mongodb-org-shell*
+  mongodb-org-tools*
+0 upgraded, 0 newly installed, 5 to remove and 116 not upgraded.
+After this operation, 293 MB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 74827 files and directories currently installed.)
+Removing mongodb-org (2.6.12) ...
+arg: remove
+Purging configuration files for mongodb-org (2.6.12) ...
+Removing mongodb-org-mongos (2.6.12) ...
+Removing mongodb-org-server (2.6.12) ...
+Purging configuration files for mongodb-org-server (2.6.12) ...
+Removing mongodb-org-shell (2.6.12) ...
+Removing mongodb-org-tools (2.6.12) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+ooohahhh:/var/log $ sudo rm -r /var/log/mongodb
+ooohahhh:/var/log $ sudo rm -r /var/lib/mongodb
+rm: cannot remove ‘/var/lib/mongodb’: No such file or directory
+ooohahhh:/var/log $ sudo apt-get install -y mongodb-org
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  mongodb-org-mongos mongodb-org-server mongodb-org-shell mongodb-org-tools
+The following NEW packages will be installed:
+  mongodb-org mongodb-org-mongos mongodb-org-server mongodb-org-shell
+  mongodb-org-tools
+0 upgraded, 5 newly installed, 0 to remove and 116 not upgraded.
+Need to get 116 MB of archives.
+After this operation, 293 MB of additional disk space will be used.
+Get:1 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org-shell amd64 2.6.12 [4479 kB]
+Get:2 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org-server amd64 2.6.12 [9541 kB]
+Get:3 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org-mongos amd64 2.6.12 [7214 kB]
+Get:4 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org-tools amd64 2.6.12 [94.5 MB]
+Get:5 http://downloads-distro.mongodb.org/repo/ubuntu-upstart/ dist/10gen mongodb-org amd64 2.6.12 [3650 B]
+Fetched 116 MB in 21s (5468 kB/s)
+Selecting previously unselected package mongodb-org-shell.
+(Reading database ... 74778 files and directories currently installed.)
+Preparing to unpack .../mongodb-org-shell_2.6.12_amd64.deb ...
+Unpacking mongodb-org-shell (2.6.12) ...
+Selecting previously unselected package mongodb-org-server.
+Preparing to unpack .../mongodb-org-server_2.6.12_amd64.deb ...
+Unpacking mongodb-org-server (2.6.12) ...
+Selecting previously unselected package mongodb-org-mongos.
+Preparing to unpack .../mongodb-org-mongos_2.6.12_amd64.deb ...
+Unpacking mongodb-org-mongos (2.6.12) ...
+Selecting previously unselected package mongodb-org-tools.
+Preparing to unpack .../mongodb-org-tools_2.6.12_amd64.deb ...
+Unpacking mongodb-org-tools (2.6.12) ...
+Selecting previously unselected package mongodb-org.
+Preparing to unpack .../mongodb-org_2.6.12_amd64.deb ...
+Unpacking mongodb-org (2.6.12) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mongodb-org-shell (2.6.12) ...
+Setting up mongodb-org-server (2.6.12) ...
+Setting up mongodb-org-mongos (2.6.12) ...
+Setting up mongodb-org-tools (2.6.12) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mongodb-org (2.6.12) ...
+ooohahhh:/var/log $ sudo service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:/var/log $ /etc/init.d
+bash: /etc/init.d: Is a directory
+ooohahhh:/var/log $ cd /etc
+ooohahhh:/etc $ cd init
+ooohahhh:/etc/init $ ls
+bootmisc.sh.conf             flush-early-job-log.conf    mounted-dev.conf                  passwd.conf                   rsyslog.conf                 udev.conf
+checkfs.sh.conf              hostname.conf               mounted-proc.conf                 php5-fpm.conf                 runsvdir.conf                udevmonitor.conf
+checkroot-bootclean.sh.conf  hwclock-save.conf           mounted-run.conf                  plymouth-log.conf             setvtrgb.conf                udevtrigger.conf
+checkroot.sh.conf            hwclock.conf                mounted-tmp.conf                  plymouth-ready.conf           shutdown.conf                upstart-file-bridge.conf
+console-font.conf            kmod.conf                   mounted-var.conf                  plymouth-shutdown.conf        startpar-bridge.conf         upstart-socket-bridge.conf
+console-setup.conf           mongod.conf                 mountkernfs.sh.conf               plymouth-splash.conf          systemd-logind.conf          upstart-udev-bridge.conf
+console.conf                 mountall-bootclean.sh.conf  mountnfs-bootclean.sh.conf        plymouth-stop.conf            tty1.conf                    ureadahead-other.conf
+container-detect.conf        mountall-net.conf           mountnfs.sh.conf                  plymouth-upstart-bridge.conf  tty2.conf                    ureadahead.conf
+control-alt-delete.conf      mountall-reboot.conf        mtab.sh.conf                      plymouth.conf                 tty3.conf                    wait-for-state.conf
+couchdb.conf                 mountall-shell.conf         mysql.conf                        procps.conf                   tty4.conf
+cron.conf                    mountall.conf               network-interface-container.conf  rc-sysinit.conf               tty5.conf
+dbus.conf                    mountall.sh.conf            network-interface-security.conf   rc.conf                       tty6.conf
+dmesg.conf                   mountdevsubfs.sh.conf       network-interface.conf            rcS.conf                      udev-fallback-graphics.conf
+failsafe.conf                mounted-debugfs.conf        networking.conf                   resolvconf.conf               udev-finish.conf
+ooohahhh:/etc/init $ vi mongod.conf
+ooohahhh:/etc/init $
+ooohahhh:/etc/init $
+ooohahhh:/etc/init $
+ooohahhh:/etc/init $
+ooohahhh:/etc/init $ sudo service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:/etc/init $ sudo service mongod stop
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod stop
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the stop(8) utility, e.g. stop mongod
+ooohahhh:/etc/init $ sudo apt-get purge mongod-org*
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package mongod-org*
+E: Couldn't find any package by regex 'mongod-org*'
+ooohahhh:/etc/init $ sudo rm -r /var/log/mongodb
+ooohahhh:/etc/init $ sudo rm -r /var/lib/mongodb
+ooohahhh:/etc/init $ uname
+Linux
+ooohahhh:/etc/init $ uname -r
+4.9.17-c9
+ooohahhh:/etc/init $ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 14.04.5 LTS
+Release:        14.04
+Codename:       trusty
+ooohahhh:/etc/init $ echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse
+ooohahhh:/etc/init $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.Tfxxx2nOFN --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyring /etc/apt/trusted.gpg.d/fkrull-deadsnakes.gpg --keyring /etc/apt/trusted.gpg.d/git-core-ppa.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+gpg: requesting key A15703C6 from hkp server keyserver.ubuntu.com
+gpg: key A15703C6: public key "MongoDB 3.4 Release Signing Key <packaging@mongodb.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+ooohahhh:/etc/init $ echo "deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+deb [ arch=amd64 ] http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse
+ooohahhh:/etc/init $ sudo apt-get update
+Ign http://repo.mongodb.org trusty/mongodb-org/3.4 InRelease
+Hit http://ppa.launchpad.net trusty InRelease
+Ign http://asia-east1.gce.clouds.archive.ubuntu.com trusty InRelease
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Hit http://ppa.launchpad.net trusty InRelease
+Get:2 http://repo.mongodb.org trusty/mongodb-org/3.4 Release.gpg [801 B]
+Ign http://downloads-distro.mongodb.org dist InRelease
+Get:3 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Ign http://toolbelt.heroku.com ./ InRelease
+Get:4 http://repo.mongodb.org trusty/mongodb-org/3.4 Release [2495 B]
+Hit http://downloads-distro.mongodb.org dist Release.gpg
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports InRelease
+Hit http://ppa.launchpad.net trusty/main i386 Packages
+Get:5 http://security.ubuntu.com trusty-security/main Sources [169 kB]
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty Release.gpg
+Hit http://downloads-distro.mongodb.org dist Release
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Hit http://toolbelt.heroku.com ./ Release.gpg
+Get:6 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/main Sources [495 kB]
+Get:7 http://repo.mongodb.org trusty/mongodb-org/3.4/multiverse amd64 Packages [5866 B]
+Hit http://ppa.launchpad.net trusty/main i386 Packages
+Hit http://downloads-distro.mongodb.org dist/10gen amd64 Packages
+Get:8 http://security.ubuntu.com trusty-security/universe Sources [71.2 kB]
+Hit http://toolbelt.heroku.com ./ Release
+Get:9 http://security.ubuntu.com trusty-security/main amd64 Packages [781 kB]
+Get:10 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/restricted Sources [6470 B]
+Hit http://downloads-distro.mongodb.org dist/10gen i386 Packages
+Hit http://toolbelt.heroku.com ./ Packages
+Get:11 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/universe Sources [234 kB]
+Get:12 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/multiverse Sources [7656 B]
+Get:13 http://security.ubuntu.com trusty-security/universe amd64 Packages [221 kB]
+Get:14 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/main amd64 Packages [1245 kB]
+Get:15 http://security.ubuntu.com trusty-security/main i386 Packages [722 kB]
+Get:16 http://security.ubuntu.com trusty-security/universe i386 Packages [222 kB]
+Get:17 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/restricted amd64 Packages [21.2 kB]
+Get:18 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/universe amd64 Packages [540 kB]
+Get:19 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [15.6 kB]
+Get:20 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/main i386 Packages [1184 kB]
+Get:21 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/restricted i386 Packages [20.9 kB]
+Get:22 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/universe i386 Packages [542 kB]
+Get:23 http://asia-east1.gce.clouds.archive.ubuntu.com trusty-updates/multiverse i386 Packages [16.1 kB]
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/main Sources
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/main i386 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/restricted i386 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/universe i386 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty-backports/multiverse i386 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty Release
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/main Sources
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/restricted Sources
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/universe Sources
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/multiverse Sources
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/main i386 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/restricted i386 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/universe i386 Packages
+Hit http://asia-east1.gce.clouds.archive.ubuntu.com trusty/multiverse i386 Packages
+Fetched 6655 kB in 13s (495 kB/s)
+Reading package lists... Done
+ooohahhh:/etc/init $ sudo apt-get install -y mongodb-org
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages will be upgraded:
+  mongodb-org
+1 upgraded, 0 newly installed, 0 to remove and 120 not upgraded.
+Need to get 3546 B of archives.
+After this operation, 45.1 kB disk space will be freed.
+Get:1 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.4/multiverse mongodb-org amd64 3.4.6 [3546 B]
+Fetched 3546 B in 0s (11.3 kB/s)
+(Reading database ... 74827 files and directories currently installed.)
+Preparing to unpack .../mongodb-org_3.4.6_amd64.deb ...
+arg: upgrade
+Unpacking mongodb-org (3.4.6) over (2.6.12) ...
+Setting up mongodb-org (3.4.6) ...
+ooohahhh:/etc/init $ sudo service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:/etc/init $ service mongod start
+Rather than invoking init scripts through /etc/init.d, use the service(8)
+utility, e.g. service mongod start
+
+Since the script you are attempting to invoke has been converted to an
+Upstart job, you may also use the start(8) utility, e.g. start mongod
+ooohahhh:/etc/init $ service mongod start(8)
+bash: syntax error near unexpected token `('
+ooohahhh:/etc/init $ cd /var /lib/mongodb
+ooohahhh:/var $ ls
+backups/  cache/  lib/  local/  lock@  log/  mail/  opt/  run@  spool/  tmp/  www/
+ooohahhh:/var $ whoami
+ubuntu
+ooohahhh:/var $ pwd
+/var
+ooohahhh:/var $ cd mongodb
+bash: cd: mongodb: No such file or directory
+ooohahhh:/var $ mkdir data
+mkdir: cannot create directory ‘data’: Permission denied
+ooohahhh:/var $ cd
+ooohahhh:~ $ pw
+bash: pw: command not found
+ooohahhh:~ $ pwd
+/home/ubuntu
+ooohahhh:~ $ cd
+ooohahhh:~ $ ls
+lib/  workspace/
+ooohahhh:~ $ pwd
+/home/ubuntu
+ooohahhh:~ $ cd workspace
+ooohahhh:~/workspace $ ls
+README.md  client/  memo  node_modules/  package.json  server.js  views/
+ooohahhh:~/workspace $ rm -r /var/log/mongodb
+rm: cannot remove ‘/var/log/mongodb’: No such file or directory
+ooohahhh:~/workspace $ ls
+README.md  client/  memo  node_modules/  package.json  server.js  views/
+ooohahhh:~/workspace $ mkdir data
+ooohahhh:~/workspace $ echo 'mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"' > mongod
+ooohahhh:~/workspace $ chmod a+x mongod
+ooohahhh:~/workspace $ ./mongod
+2017-07-08T04:13:56.723+0000 ** WARNING: --rest is specified without --httpinterface,
+2017-07-08T04:13:56.723+0000 **          enabling http interface
+warning: bind_ip of 0.0.0.0 is unnecessary; listens on all ips by default
+2017-07-08T04:13:56.727+0000 [initandlisten] MongoDB starting : pid=45281 port=27017 dbpath=data 64-bit host=ooohahhh-sosongbot-5077690
+2017-07-08T04:13:56.728+0000 [initandlisten] db version v2.6.12
+2017-07-08T04:13:56.728+0000 [initandlisten] git version: d73c92b1c85703828b55c2916a5dd4ad46535f6a
+2017-07-08T04:13:56.728+0000 [initandlisten] build info: Linux build5.ny.cbi.10gen.cc 2.6.32-431.3.1.el6.x86_64 #1 SMP Fri Jan 3 21:39:27 UTC 2014 x86_64 BOOST_LIB_VERSION=1_49
+2017-07-08T04:13:56.728+0000 [initandlisten] allocator: tcmalloc
+2017-07-08T04:13:56.729+0000 [initandlisten] options: { net: { bindIp: "0.0.0.0", http: { RESTInterfaceEnabled: true, enabled: true } }, storage: { dbPath: "data", journal: { enabled: false } } }
+2017-07-08T04:13:56.743+0000 [initandlisten] allocating new ns file data/local.ns, filling with zeroes...
+2017-07-08T04:13:56.828+0000 [FileAllocator] allocating new datafile data/local.0, filling with zeroes...
+2017-07-08T04:13:56.828+0000 [FileAllocator] creating directory data/_tmp
+2017-07-08T04:13:56.843+0000 [FileAllocator] done allocating datafile data/local.0, size: 64MB,  took 0.009 secs
+2017-07-08T04:13:56.844+0000 [initandlisten] build index on: local.startup_log properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "local.startup_log" }
+2017-07-08T04:13:56.844+0000 [initandlisten]     added index to empty collection
+2017-07-08T04:13:56.844+0000 [initandlisten] waiting for connections on port 27017
+2017-07-08T04:13:56.844+0000 [websvr] admin web console waiting for connections on port 28017
+
+
+
+
+
+2017-07-08T04:14:56.744+0000 [clientcursormon] mem (MB) res:48 virt:232
+2017-07-08T04:14:56.744+0000 [clientcursormon]  mapped:80
+2017-07-08T04:14:56.744+0000 [clientcursormon]  connections:0
+
+
+
+2017-07-08T04:19:56.757+0000 [clientcursormon] mem (MB) res:48 virt:232
+2017-07-08T04:19:56.757+0000 [clientcursormon]  mapped:80
+2017-07-08T04:19:56.757+0000 [clientcursormon]  connections:0
+2017-07-08T04:22:53.542+0000 [initandlisten] connection accepted from 127.0.0.1:51738 #1 (1 connection now open)
+2017-07-08T04:24:56.773+0000 [clientcursormon] mem (MB) res:48 virt:233
+2017-07-08T04:24:56.773+0000 [clientcursormon]  mapped:80
+2017-07-08T04:24:56.773+0000 [clientcursormon]  connections:1
+2017-07-08T04:26:59.317+0000 [conn1] end connection 127.0.0.1:51738 (0 connections now open)
+2017-07-08T04:27:04.774+0000 [initandlisten] connection accepted from 127.0.0.1:57210 #2 (1 connection now open)
+2017-07-08T04:27:04.790+0000 [initandlisten] connection accepted from 127.0.0.1:57214 #3 (2 connections now open)
+2017-07-08T04:27:04.794+0000 [conn3] allocating new ns file data/test.ns, filling with zeroes...
+2017-07-08T04:27:04.857+0000 [FileAllocator] allocating new datafile data/test.0, filling with zeroes...
+2017-07-08T04:27:04.865+0000 [FileAllocator] done allocating datafile data/test.0, size: 64MB,  took 0.008 secs
+2017-07-08T04:27:04.866+0000 [conn3] build index on: test.testmodels properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "test.testmodels" }
+2017-07-08T04:27:04.866+0000 [conn3]     added index to empty collection
+2017-07-08T04:27:31.677+0000 [conn2] end connection 127.0.0.1:57210 (1 connection now open)
+2017-07-08T04:27:31.677+0000 [conn3] end connection 127.0.0.1:57214 (0 connections now open)
+2017-07-08T04:27:51.562+0000 [initandlisten] connection accepted from 127.0.0.1:58448 #4 (1 connection now open)
+2017-07-08T04:27:51.578+0000 [initandlisten] connection accepted from 127.0.0.1:58450 #5 (2 connections now open)
+2017-07-08T04:27:56.779+0000 [clientcursormon] mem (MB) res:50 virt:315
+2017-07-08T04:27:56.779+0000 [clientcursormon]  mapped:160
+2017-07-08T04:27:56.779+0000 [clientcursormon]  connections:2
+^A^A

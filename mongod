@@ -1,0 +1,2 @@
+//데이터파일 만들기
+mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"
