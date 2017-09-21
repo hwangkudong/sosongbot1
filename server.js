@@ -1,52 +1,74 @@
-/*eslint-env node, express*/
-/** 
-* Created by http://myeonguni.com on 2016-09-02. 
-*/ 
-  
-var express = require('express'); 
-var app = express(); 
-var bodyParser = require('body-parser'); 
-var session = require('express-session'); 
+var express  = require('express');
 var mongoose = require('mongoose');
 
-// cfenv provides access to your Cloud Foundry environment
-// for more info, see: https://www.npmjs.com/package/cfenv
-var cfenv = require('cfenv');
+var path = require('path');
 
-// get the app environment from Cloud Foundry
-var appEnv = cfenv.getAppEnv();
+var app = express();
 
+app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, '/views'));
+app.use(express.bodyParser());
 
-// start server on the specified port and binding host
-var server = app.listen(appEnv.port, '0.0.0.0', function() {
-  // print a message when the server starts listening
-  console.log("server starting on " + appEnv.url);
+var port = process.env.PORT || 8080;
+
+var server = app.listen(port, function() {
+	console.log('server start....port=' + port);
 });
 
-app.use(bodyParser.json());//body json
-app.use(bodyParser.urlencoded()); 
-app.use(session({ 
-secret: 'zhJ5Ia4X598Y6PEd2hBVeZQC8TA', 
-resave: false, 
-saveUninitialized: true 
-})); 
-//public 폴더를 정적자원 디렉토리로 지정
-app.use(express.static(__dirname + '/public'));
+//db 생성
+//mongoose.connect('mongodb://localhost:27017/test'); // 기본 설정에 따라 포트가 상이 할 수 있습니다.
 
-//db연결
-//db설정
-mongoose.connect('mongodb://sosong:sosong@aws-us-east-1-portal.26.dblayer.com:20793/admin?ssl=true');
+//윤과장님이 생성한 DB
+mongoose.connect('mongodb://sosong:sosong@aws-us-east-1-portal.24.dblayer.com:20793/admin?ssl=true');   //성공
+
 
 var db = mongoose.connection;
-db.on('error', console.error.bind(console,'connection error:'));
-db.once('open', function() {
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
 	console.log("mongo db connection OK.");
+
 });
 
-//keyboard routing
-app.use('/keyboard', require('/router/keyboard'));
+var router = require('./routes')(app);
 
-//message routing
-app.use('/message', require('/router/message'));
+/*
+var sosongbot    = require('./models/sosongbot');
+var sosongbotUHD = require('./models/sosongbotUHD');
 
-//var router = require('./router/main')(app, fs); 
+var router = require('./routes')(app, sosongbot, sosongbotUHD);
+
+
+//파일에 있는 데이터 정보를 읽어서 기본 데이터 등록하기
+fs.exists('./models/data.json', function(exists) {
+	if (!exists) {
+		console.log('데이터 파일이 존재하지 않습니다.');
+	}
+
+	jsonFile.readFile('./models/data.json', function(err, jsonData) {
+		if (err) {
+			console.log('데이터 파일 읽는 중 오류 발생');
+			throw err;
+			
+		} else {
+			
+			for ( var i = 0 ; i < jsonData.length; i++ ) {
+
+				if ( jsonData[i].isnew === true ) {
+					var sosongbotdata = new sosongbot({keyword:jsonData[i].keyword, answer:jsonData[i].answer});
+	
+    				sosongbotdata.save(function(err){
+    					if(err){
+        					console.error(err);
+            				return;
+        				} else {
+        					console.log('data insert success');
+    					}
+    				});
+				}
+			}
+		}
+	});
+});
+
+var router = require('./routes')(app, sosongbot);
+*/
