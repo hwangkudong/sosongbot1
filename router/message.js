@@ -1,6 +1,8 @@
 /**
  *'/message' 경로 접근에 대한 처리 
  */
+module.exports = function(){
+	
 var app = require('express');
 var router = app.Router();
 var mongoose = require('mongoose');
@@ -9,11 +11,11 @@ var db = mongoose.connection;
 var rtn_msg = ''; 
 
 router.use(function(req,res,next){
-	console.log('Time:' , Data.now(), ' user_key:', req.body["user_key"]);
+	console.log('Time:' , Date.now(), ' user_key:', req.body["user_key"]);
 	
 	fs.readFile(__dirname + '/../data/unavailable_msg.json', 'utf-8', function(err,data){
 		rtn_msg = JSON.parse(data);
 	});
 });
+}
 
-module.exports = router;
