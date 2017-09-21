@@ -10,13 +10,13 @@ var express = require('express');
 
 // cfenv provides access to your Cloud Foundry environment
 // for more info, see: https://www.npmjs.com/package/cfenv
-var cfenv = require('cfenv');
+var cfenv = require('cfenv'); 
 
 // create a new express server
 var app = express();
 
 // public 폴더를 정적자원 디렉토리로 지정
-app.use(express.static(__dirname + '/public'));   
+app.use(express.static(__dirname + '/public'));
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
