@@ -16,7 +16,7 @@ var cfenv = require('cfenv');
 var app = express();
 
 // public 폴더를 정적자원 디렉토리로 지정
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));   
 
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
@@ -31,9 +31,9 @@ app.listen(appEnv.port, '0.0.0.0', function() {
 
 // 키보드
 //app.get('/keyboard', (req, res) => {
-//	
+//
 // console.log('APIs initialize');
-//	
+//
 //  const menu = {
 //      type: 'buttons',
 //      buttons: ["메뉴1", "메뉴2", "메뉴3"]
