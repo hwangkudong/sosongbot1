@@ -3,7 +3,7 @@
  */
  module.exports = function(mongoose){
 	var app = require('express');
-	var router = app.Router();
+	var router = app.Router;
 	var fs = require('fs');
 	var rtn_msg = '';
 
