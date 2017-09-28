@@ -1,13 +1,13 @@
 /*eslint-env node, express*/
-/** 
-* Created by http://myeonguni.com on 2016-09-02. 
-*/ 
-  
-var express = require('express'); 
+/**
+* Created by http://myeonguni.com on 2016-09-02.
+*/
+
+var express = require('express');
 var http = require('http');
-var app = express(); 
-var bodyParser = require('body-parser'); 
-var session = require('express-session'); 
+var app = express();
+var bodyParser = require('body-parser');
+var session = require('express-session');
 var mongoose = require('mongoose');
 var path = require('path');
 var expressErrorHandler = require('express-error-handler');
@@ -37,12 +37,12 @@ httpServer.on('error',function(err){
 	console.log('error');
 });
 app.use(bodyParser.json());//body json
-app.use(bodyParser.urlencoded({ extended : false })); 
-app.use(session({ 
-secret: 'zhJ5Ia4X598Y6PEd2hBVeZQC8TA', 
-resave: false, 
-saveUninitialized: true 
-})); 
+app.use(bodyParser.urlencoded({ extended : false }));
+app.use(session({
+secret: 'zhJ5Ia4X598Y6PEd2hBVeZQC8TA',
+resave: false,
+saveUninitialized: true
+}));
 //public 폴더를 정적자원 디렉토리로 지정
 app.use(express.static(path.join(__dirname,'public')));
 
@@ -68,7 +68,8 @@ db.once('open', function() {
 //app.use(ErrorHandler);
 
 var k_r = require('./router/keyboard');
+k_r(mongoose);
 //keyboard routing
-app.use('/keyboard', require('./router/keyboard'));
+app.use('/keyboard', k_r);
 //message routing
 app.use('/message', require('./router/message'));
