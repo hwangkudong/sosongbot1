@@ -96,7 +96,11 @@ db.once('open', function callback () {
 //app.use(ErrorHandler);
 
 var k_r = require('./router/keyboard');
+<<<<<<< HEAD
 k_r(app,mongoose);
+=======
+k_r(mongoose);
+>>>>>>> 979d38238c7f2b523a81749080172c88accbb3e0
 //keyboard routing
 app.use('/keyboard', k_r);
 //message routing

@@ -1,6 +1,7 @@
 /**
  *'/keyboard' 경로 접근에 대한 처리
  */
+<<<<<<< HEAD
 module.exports = function(app,mongoose){
 	console.log('keyboard connecting.......');
 	// var app = require('express');
@@ -10,6 +11,15 @@ module.exports = function(app,mongoose){
 	var rtn_msg = '';
 
 	router.use('/').get(function(req,res,next){
+=======
+ module.exports = function(mongoose){
+	var app = require('express');
+	var router = app.Router;
+	var fs = require('fs');
+	var rtn_msg = '';
+
+	router.route('/').get(function(req,res,next){
+>>>>>>> 979d38238c7f2b523a81749080172c88accbb3e0
 		console.log('Time:' , Date.now(), ' user_key:', req.body["user_key"]);
 
 		try{
