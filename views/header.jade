@@ -1,0 +1,34 @@
+script.
+  var del_uhd = function() {
+    
+    add_estimation.admin_menu.value = 'del_uhd';
+    add_estimation.submit();
+  }
+  
+  var del_intel = function() {
+    add_estimation.admin_menu.value = 'del_intel';
+    add_estimation.submit();
+
+  }
+  
+  var upload_data_file = function() {
+    add_estimation.admin_menu.value = 'upload_data_file';
+    add_estimation.submit();
+    
+  }
+  
+  var insert_data = function() {
+
+    add_estimation.admin_menu.value = 'insert_data';
+    add_estimation.submit();
+  
+  }
+  
+input(type='button' id='view_schema'      name='view_schema'      value='소송도우미 데이터 지우기'     onclick='del_uhd()')
+input(type='button' id='view_all_data'    name='view_all_data'    value='지능형uhd 데이터 지우기' onclick='del_intel()')
+input(type='button' id='upload_data_file' name='upload_data_file' value='데이터파일등록' onclick='upload_data_file()')
+input(type='button' id='insert_data'      name='insert_data'      value='데이터저장'     onclick='insert_data()')
+
+div
+ form(name="add_estimation", method="post")
+  input(type="hidden", name="admin_menu")
