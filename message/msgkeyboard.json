@@ -1,0 +1,9 @@
+{
+	"message": {
+		"text": "오늘 하루도 행복한 하루되세요. *^^*"
+	},
+	"keyboard": {
+		"type" : "buttons",
+		"buttons" : ["사이버 소송도우미", "지능형 UHD", "만든이"]
+	}
+}
