@@ -5,9 +5,11 @@ var path = require('path');
 
 var app = express();
 
+var bodyParser = require("body-parser");
+
 app.set('view engine', 'jade');
 app.set('views', path.join(__dirname, '/views'));
-app.use(express.bodyParser());
+// app.use(bodyParser);
 
 var port = process.env.PORT || 8080;
 
