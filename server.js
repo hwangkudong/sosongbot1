@@ -9,7 +9,8 @@ var bodyParser = require("body-parser");
 
 app.set('view engine', 'jade');
 app.set('views', path.join(__dirname, '/views'));
-// app.use(bodyParser);
+app.use(bodyParser.urlencoded( { extended: true }));
+app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080;
 

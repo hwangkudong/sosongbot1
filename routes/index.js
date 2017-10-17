@@ -16,7 +16,7 @@ module.exports = function(app) {
 
   app.get('/keyboard', function(req, res) {
 
-    keyboard.keyboard(req, res, sosongbot);
+    keyboard.keyboard(req, res, sosongbotUHD);
     return;
 
   });
