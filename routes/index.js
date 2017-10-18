@@ -24,18 +24,18 @@ module.exports = function(app) {
   app.post('/message', function(req, res) {
 
     console.log("==>" + req.body['content']);
-
+    //최초 메뉴 선택
     if ( req.body['content'] === '사이버 소송 도우미' || req.body['content'] === '지능형 UHD' ) {
       top_menu = req.body['content'];
 
-      sub_menu.clear;
+      sub_menu.clear;//사용자가 선택한 메뉴를 저장할 배열의 초기화
 
       sub_menu[0] = 'HOME';
       sub_menu[sub_menu.length] = req.body['content'];
 
-    } else {
+    } else { //사이버 또는 지능형UHD선택 후
 
-      if ( req.body['content'] === '이전 메뉴' ) {
+      if ( req.body['content'] === '이전 메뉴' ) {//Back에 대한 처리
 
         sub_menu.splice(sub_menu.length-1, 1);
 
