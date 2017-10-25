@@ -1,22 +1,19 @@
 var fs = require('fs');
 var file_name = 'keyboard.js';
-exports.keyboard = function(req, res, sosongbotUHD) {
-  var Iconv = require('iconv').Iconv;
-  var iconv = new Iconv('EUC-KR', 'UTF-8//TRANSLIT//IGNORE');
+exports.keyboard = function(req, res, sosongbot) {
 
   console.log('/keyboard logic is starting..');
 
-  sosongbotUHD.find({menu_nm:'HOME'}, function(err, sosongbotUHD) {
+  sosongbot.find({menu_nm:'HOME'}, function(err, sosongbotData) {
     if(err) {
       return res.status(500).send({error:'no data'});
     } else {
       try{
         var rtnMsg = require('../message/rtnMsg.js');
-        var btn_arr = sosongbotUHD[0].button.split(",");
-        btn_arr[btn_arr.length] = "테스트";
+        var btn_arr = sosongbotData[0].button.split(",");
         rtnMsg.keyboard.buttons = btn_arr;
         console.log('[D][' + file_name + '] return data -' + JSON.stringify(rtnMsg.keyboard));
-        iconv.convert(rtnMsg.keyboard).toString('UTF-8');
+
         res.json(rtnMsg.keyboard);
       }catch(ex){
         console.log('[E][' + file_name + '] error occurs(' + ex + ')' );
@@ -26,7 +23,7 @@ exports.keyboard = function(req, res, sosongbotUHD) {
   });
 };
 
-exports.keyboardFromMessage = function(req, res, sosongbotUHD) {
+exports.keyboardFromMessage = function(req, res, sosongbot) {
 
     var v_menu = '';
 
@@ -39,14 +36,14 @@ exports.keyboardFromMessage = function(req, res, sosongbotUHD) {
 
     //console.log('선택한 메뉴 값:' + v_menu);
 
-    sosongbotUHD.find({menu_nm:v_menu}, function(err, sosongbotUHD) {
+    sosongbot.find({menu_nm:v_menu}, function(err, sosongbotData) {
 
       if(err) {
         return res.status(500).send({error:'no data'});
       } else {
 
-        //console.log('버튼:' + sosongbotUHD[0].button);
-        //console.log('내용:' + sosongbotUHD[0].content);
+        //console.log('버튼:' + sosongbotData[0].button);
+        //console.log('내용:' + sosongbotData[0].content);
 
         fs.readFile( __dirname + "/../message/msgkeyboard.json", 'utf8',  function(err, data){
 
@@ -56,9 +53,9 @@ exports.keyboardFromMessage = function(req, res, sosongbotUHD) {
 
             var messages = JSON.parse(data);
 
-            var m_button  = sosongbotUHD[0].button;
-            messages["message"] = {"text" : sosongbotUHD[0].content };
-            var marr = sosongbotUHD[0].button.split(",");
+            var m_button  = sosongbotData[0].button;
+            messages["message"] = {"text" : sosongbotData[0].content };
+            var marr = sosongbotData[0].button.split(",");
             messages["keyboard"] = {"type" : "buttons", "buttons" :  marr  };
 
             res.json(messages);

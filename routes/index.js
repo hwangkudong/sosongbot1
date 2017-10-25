@@ -16,7 +16,7 @@ module.exports = function(app) {
 
   app.get('/keyboard', function(req, res) {
 
-    keyboard.keyboard(req, res, sosongbotUHD);
+    keyboard.keyboard(req, res, sosongbot);
     return;
 
   });
@@ -60,7 +60,7 @@ module.exports = function(app) {
     console.log('메뉴21==================>' + req.body['content'] );
 
     if ( top_menu === '사이버 소송 도우미' ) {
-      keyboard.keyboardFromMessage(req, res, sosongbotUHD);
+      keyboard.keyboardFromMessage(req, res, sosongbot);
 
     } else {
       message.message(req, res, sosongbot, sosongbotUHD);
