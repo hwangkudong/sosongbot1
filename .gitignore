@@ -1,2 +1,3 @@
 launchConfigurations/
 *.log.*
+node_modules/
