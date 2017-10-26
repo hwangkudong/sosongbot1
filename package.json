@@ -1,10 +1,12 @@
 {
-  "name": "chat-example",
-  "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "name": "sosongbot",
+  "version": "0.1.0",
+  "description": "autoreply chatting program for a court case",
   "main": "server.js",
-  "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "anonymous member in CNS",
   "dependencies": {
     "async": "~0.2.8",
     "body-parser": "^1.17.2",
@@ -12,7 +14,7 @@
     "cookie-parser": "^1.4.3",
     "express": "^3.2.6",
     "jade": "^1.11.0",
-    "jsonfile": "^3.0.1",
+    "jsonfile": "^4.0.0",
     "mongo": "^0.1.0",
     "mongodb": "^2.2.30",
     "mongoose": "^4.11.1",

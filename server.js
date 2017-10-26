@@ -5,9 +5,12 @@ var path = require('path');
 
 var app = express();
 
+var bodyParser = require("body-parser");
+
 app.set('view engine', 'jade');
 app.set('views', path.join(__dirname, '/views'));
-app.use(express.bodyParser());
+app.use(bodyParser.urlencoded( { extended: true }));
+app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080;
 
@@ -76,6 +79,7 @@ var router = require('./routes')(app);
 /*
 var sosongbot    = require('./models/sosongbot');
 var sosongbotUHD = require('./models/sosongbotUHD');
+
 var router = require('./routes')(app, sosongbot, sosongbotUHD);
 //파일에 있는 데이터 정보를 읽어서 기본 데이터 등록하기
 fs.exists('./models/data.json', function(exists) {
@@ -86,13 +90,13 @@ fs.exists('./models/data.json', function(exists) {
 		if (err) {
 			console.log('데이터 파일 읽는 중 오류 발생');
 			throw err;
-			
+
 		} else {
-			
+
 			for ( var i = 0 ; i < jsonData.length; i++ ) {
 				if ( jsonData[i].isnew === true ) {
 					var sosongbotdata = new sosongbot({keyword:jsonData[i].keyword, answer:jsonData[i].answer});
-	
+
     				sosongbotdata.save(function(err){
     					if(err){
         					console.error(err);

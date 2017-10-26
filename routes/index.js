@@ -13,15 +13,14 @@ modeMng.setMode(1);
 console.log("modeMng2" + modeMng.getMode());
 
 module.exports = function(app) {
-  
+
   var util = require(path + '/util/util.js');
   var message = require(path + '/routes/message.js');
   var keyboard = require(path + '/routes/keyboard.js');
 
   app.get('/keyboard', function(req, res) {
-    
-    console.log("여기는 keyboard 메시지 일때 들어 옵니다.");
-    keyboard.keyboard(req, res, sosongbotUHD);
+
+    keyboard.keyboard(req, res, sosongbot);
     return;
 
   });
@@ -32,16 +31,16 @@ module.exports = function(app) {
 
     if ( req.body['content'] === '사이버 소송 도우미' || req.body['content'] === '지능형 UHD' ) {
       top_menu = req.body['content'];
-      
-      sub_menu.clear;
-      
+
+      sub_menu.clear;//사용자가 선택한 메뉴를 저장할 배열의 초기화
+
       sub_menu[0] = 'HOME';
       sub_menu[sub_menu.length] = req.body['content'];
-      
-    } else {
 
-      if ( req.body['content'] === '이전 메뉴' ) {
-       
+    } else { //사이버 또는 지능형UHD선택 후
+
+      if ( req.body['content'] === '이전 메뉴' ) {//Back에 대한 처리
+
         sub_menu.splice(sub_menu.length-1, 1);
 
       } else {
@@ -49,7 +48,7 @@ module.exports = function(app) {
       }
     }
 
-    req.body['content'] = sub_menu[sub_menu.length-1];    
+    req.body['content'] = sub_menu[sub_menu.length-1];
 
   //  console.log('메뉴0==================>' + top_menu );
     //console.log('메뉴1==================>' + req.body['type'] );
@@ -65,17 +64,15 @@ module.exports = function(app) {
     //console.log('메뉴21==================>' + req.body['content'] );
     
     if ( top_menu === '사이버 소송 도우미' ) {
-      console.log('진입합니다. 1' );    
-      keyboard.keyboardFromMessage(req, res, sosongbotUHD);
-      
+      keyboard.keyboardFromMessage(req, res, sosongbot);
+
     } else {
-      console.log('진입합니다. 2' );    
       message.message(req, res, sosongbot, sosongbotUHD);
       console.log(message.message.qnaMode);    
     }
-    
+
     return;
-    
+
   });
 
 
