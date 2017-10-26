@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "chat-example",
   "version": "0.0.0",
   "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
@@ -9,6 +8,7 @@
   "dependencies": {
     "async": "~0.2.8",
     "body-parser": "^1.17.2",
+    "cfenv": "^1.0.4",
     "cookie-parser": "^1.4.3",
     "express": "^3.2.6",
     "jade": "^1.11.0",
@@ -17,30 +17,7 @@
     "mongodb": "^2.2.30",
     "mongoose": "^4.11.1",
     "multer": "^1.3.0",
-    "socket.io": "^0.9.19"
-=======
-  "name": "NodejsStarterApp",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "body-parser": "~1.14.2",
-    "cfenv": "1.0.x",
-    "encodeuri-safe": "~0.0.1",
-    "express": "4.13.x",
-    "express-session": "~1.13.0",
-    "jade": "^1.11.0",
-    "jsonfile": "^4.0.0",
-    "mongoose": "^4.11.1",
-    "multer": "^1.3.0",
-    "request": "~2.74.0",
-    "watson-developer-cloud": "latest"
-  },
-  "repository": {},
-  "engines": {
-    "node": "4.x"
->>>>>>> develop
+    "socket.io": "^0.9.19",
+    "watson-developer-cloud": "^2.39.0"
   }
 }
